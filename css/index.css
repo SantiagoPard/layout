@@ -26,3 +26,23 @@
 .paginaPrincipal header h1,.paginaPrincipal footer p{
     color:#fff;
 }
+.paginaPrincipal .contenido{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items:center;
+    height: calc(100vh - 300px);
+}
+.contenido nav{
+    width: 200px;
+    background-color: rgb(154, 154, 154);
+    height: calc(100vh - 300px);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.contenido article{
+    width: calc(100vw - 200px);
+    height: calc(100vh - 300px);
+}
