@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>document</title>
+    </head>
+    <body>
+        <script>
+            var nombrePersona = 'johan ';
+            let nombreMascota = 'pelusa';
+            console.log("hola " + nombrePersona + ' !!!!');
+            console.log("hola " + nombreMascota + ' !!!!');
+            
+            let edad1 = 20;
+            let mayorEdad = true; //false
+            const EDAD_MAXIMA = 18;
+            //objeto = instancia de una clase
+            let lista = [9,8,7,6,5,4];
+            console.log(lista);
+            let lista2 = [...lista];//lista inmutable
+            lista2.push(10);
+            console.log(lista2);
+
+            let persona = {
+                nombre:'santiago',
+                apellido: 'pardo',
+                edad:18,
+                mayorEdad: true,
+                jobs:['cine','desarrollo','videojuegos']
+            }
+            console.log(persona.nombre,persona.apellido,persona.jobs[1]);
+
+            let personas=[
+                {nombre:'santiago',apellido:'pardo',edad:30},
+                {nombre:'ana',apellido:'diaz',edad:30},
+                {nombre:'jose',apellido:'gomez',edad:30},
+                {nombre:'maria',apellido:'Lopez',edad:30},
+                {nombre:'camilo',apellido:'lopez',edad:30},
+            ]
+            console.log(personas[1]);
+
+            for(let posicion = 0;posicion < personas.length;posicion++){
+                               
+                let persona = personas[posicion];
+                    if(persona.edad >= 18)
+                    {
+                            console.log(persona.nombre,' es mayor de edad');
+                    }else{
+                        console.log(persona.nombre,' es menor de edad');
+                    }
+
+            }
+            let index = 0;
+            // console.log('while-------------------------------');
+            // while(index<personas.length){
+            //     let persona = personas[index];
+            //         if(persona.edad >= 18)
+            //         {
+            //                 console.log(persona.nombre,' es mayor de edad');
+            //         }else{
+            //             console.log(persona.nombre,' es menor de edad');
+            //         }
+            //         index++;
+            // }
+            // console.log('while con break-------------------------------');
+            // index = 0;
+            // let estado = true;
+            // while(estado){
+            //     let persona = personas[index];
+            //         if(persona.edad >= 18)
+            //         {
+            //                 console.log(persona.nombre,' es mayor de edad');
+            //         }else{
+            //             console.log(persona.nombre,' es menor de edad');
+            //         }
+            //         index++; 
+            //         if(index==personas.length){
+            //             break;
+            //         }
+                          
+            // }
+            // console.log('Do while -------------------------')
+            // index = 0;
+            // do{
+            //     let persona = personas[index];
+            //         if(persona.edad >= 18)
+            //         {
+            //                 console.log(persona.nombre,' es mayor de edad');
+            //         }else{
+            //             console.log(persona.nombre,' es menor de edad');
+            //         }
+            //         index++; 
+                   
+                
+            // }while(index<personas.length);
+            
+            // console.log('for|in ---------------------------')
+            // for(let index in personas){
+            //     let persona = personas[index];
+            //         if(persona.edad >= 18)
+            //         {
+            //                 console.log(persona.nombre,' es mayor de edad');
+            //         }else{
+            //             console.log(persona.nombre,' es menor de edad');
+            //         }
+            //         index++; 
+            //         if(index==personas.length){
+            //             break;
+            //         }
+                
+            // }
+            console.log('for | of ---------------------------')
+            for(let persona of personas){
+                
+                    if(persona.edad >= 18)
+                    {
+                            console.log(persona.nombre,' es mayor de edad');
+                    }else{
+                        console.log(persona.nombre,' es menor de edad');
+                    }
+                    index++; 
+                    if(index==personas.length){
+                        break;
+                    }
+                
+            }
+            console.log('foreach---------------------------');
+            personas.forEach((persona) => {
+                console.log('for|in ---------------------------')
+                    if(persona.edad >= 18)
+                    {
+                            console.log(persona.nombre,' es mayor de edad');
+                    }else{
+                        console.log(persona.nombre,' es menor de edad');
+                    }
+                
+            })
+            console.log('-----------------------------------')
+                let opcion = 'A';
+                switch(opcion){
+                    case 'A':/*
+
+                    */
+                   break;
+                   case 'b':/*
+
+                    */
+                   break;
+                   case 'c':/*
+
+                    */
+                   break;
+                   default:
+                    //codigo
+                    break;
+                }
+            
+                //&& (expe)
+                //== igual en valor 
+                //!= diferente
+                //=== igual en valor y tipo de variable
+
+                console.log('a',('5'==5));
+                console.log('b',('5'===5));
+        
+            
+        </script>
+    </body>
+</html>
