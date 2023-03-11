@@ -126,7 +126,7 @@
             }
             console.log('foreach---------------------------');
             personas.forEach((persona) => {
-                console.log('for|in ---------------------------')
+              
                     if(persona.edad >= 18)
                     {
                             console.log(persona.nombre,' es mayor de edad');
@@ -162,8 +162,81 @@
 
                 console.log('a',('5'==5));
                 console.log('b',('5'===5));
-        
-            
+
+                function validarEdad(edad){
+                    if(edad >= 18)
+                    {
+                            console.log('la persona es mayor de edad');
+                    }else{
+                        console.log('la persona es menor de edad');
+                    }
+                }
+                validarEdad(20);
+                
+                function esMayorEdad(edad){
+                    return edad>=18?'la persona es mayor de edad':'la persona es menor de edad';
+                }
+                console.log(esMayorEdad(17));
+                
+                let validarEdad2 = function(edad)
+                {
+                    if(edad >= 18)
+                    {
+                            console.log('la persona es mayor de edad');
+                    }else{
+                        console.log('la persona es menor de edad');
+                    }
+                }
+                
+                validarEdad2(30);
+
+                let esMayorEdad2 = (edad)=>{
+                    return edad>=18?'la persona es mayor de edad':'la persona es menor de edad';  
+                }
+                console.log(esMayorEdad2(25))
+
+                class Persona{
+                    nombre = '';
+                    apellido = '';
+                    edad = 0;
+                    email = '';
+
+                    getNombreCompleto(){
+                        return this.nombre + '  ' +this.apellido;
+                    }
+
+                    esMayorEdad(){
+                        // if(this.edad>=18){
+                        //     return 'Si';
+                        // }else{
+                        //     return'No';
+                        // }
+                        return this.edad>=18?'Si':'No'
+                    }
+                }
+                
+                let persona1 = new Persona();
+                persona1.nombre = 'santiago';
+                persona1.apellido = 'pardo';
+                persona1.edad = 20;
+
+                console.log('El nombre de la persona es: ',persona1.getNombreCompleto());
+                console.log('¿Es mayor de edad?',persona1.esMayorEdad());
+
+                class Estudiante extends Persona{
+                    codigo = '';
+                    cantidadMaterias = 0;
+                }
+                class Docente extends Persona{
+                    codigo = '';
+                }
+
+                let estudiantes1 = new Estudiante();
+                estudiantes1.nombre = 'santiago';
+                estudiantes1.apellido = 'pardo';
+                estudiantes1.condigo = '123123';
+                estudiantes1.cantidadMaterias = 7;
+                console.log('Nombre de la persona',estudiantes1.getNombreCompleto());
         </script>
     </body>
 </html>
